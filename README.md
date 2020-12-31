@@ -17,5 +17,5 @@ image search app with unsplash
 
 3. Paste the Access Key in UnsplashAPI.kt class file in YOUR_KEY_HERE.
 
-Good to go. 
+Good to go..
 
