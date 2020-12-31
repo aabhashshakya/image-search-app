@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- frame layout is used to stack layouts. the latest layout will appear on top of the previous layout
+in this case.. the textview can appear above the imageview which appears above scrollview -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".VIEW.FRAGMENTS.DetailsFragment">
+
+    <!-- scrollview as the image may be bigger than the screen space -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_launcher_background" />
+
+                <ImageButton
+                    android:id="@+id/share_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="15dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingBottom="3dp"
+                    android:src="@drawable/ic_baseline_share_24"
+                    android:visibility="gone"
+                    tools:src="@drawable/ic_baseline_share_24"
+                    tools:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/save_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="65dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingBottom="3dp"
+                    android:src="@drawable/ic_baseline_save_alt_24"
+                    android:visibility="gone"
+                    tools:src="@drawable/ic_baseline_save_alt_24"
+                    tools:visibility="visible" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp"
+
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="normal|italic"
+                android:visibility="gone"
+                tools:text="This is the description"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/teal_200"
+                android:textSize="18dp"
+                android:visibility="gone"
+                tools:text="Username"
+                tools:textColor="@color/teal_200"
+                tools:visibility="visible" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+
+</FrameLayout>

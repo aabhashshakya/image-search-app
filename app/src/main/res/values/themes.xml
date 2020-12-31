@@ -1,0 +1,7 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="yeet" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+
+    </style>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".VIEW.FRAGMENTS.GalleryFragment">
+    <!-- this context is needed for the preview in the nav_graph . optional if you don't care about the preview-->
+
+
+    <!--set set the recycler view layout manager here so we dont need to set it in the code-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/recycler_view_layout" />
+
+    <!-- progressbar for when the items are loading. it is invisible.
+    for previewing this, we put tools:visibility to true so it is easier to work with here -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@android:style/Widget.Material.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+    <!--RETRY button for when the images cannot be loaded. it is invisible as well-->
+    <Button
+        android:id="@+id/button_retry"
+        style="@style/Theme.AppCompat.DayNight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/retry"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!--TextView for when the images cannot be loaded. it is invisible as well-->
+
+    <!-- for when no result are found for the search. it is invisible as well initially-->
+    <TextView
+        android:id="@+id/error_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_retry"
+        android:layout_centerHorizontal="true"
+        android:text="@string/please_check_your_internet_connection"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/query_not_found_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_results_found"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+</RelativeLayout>

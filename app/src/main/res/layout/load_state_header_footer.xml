@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- THIS LAYOUT IS USED BY THE LOADSTATEADAPTER AS HEADER OR FOOTER OR BOTH -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <!-- If the internet is disconnected you can display a RETRY button and TEXT at the bottom or top-->
+
+    <Button
+        android:id="@+id/button_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/retry" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_retry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/internet_connection_lost_click_retry_to_try_again"
+        android:textColor="@color/white" />
+
+    <!-- If you have slow internet or if you are scrolling through the recycler view fast, you can display a progress bar. Its
+    VISIBILITY is automatically handled by the LoadStateAdapter -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true" />
+
+
+</RelativeLayout>

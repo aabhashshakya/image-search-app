@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Image Search App</string>
+    <string name="results_could_not_be_loaded">Results could not be loaded</string>
+    <string name="no_results_found">No results found for your query</string>
+    <string name="retry">RETRY</string>
+    <string name="internet_connection_lost_click_retry_to_try_again">Internet connection lost. Click RETRY to try again</string>
+    <string name="search">Search</string>
+    <string name="this_is_the_image_description">This is the image description</string>
+    <string name="yee">yee</string>
+    <string name="please_check_your_internet_connection">Please check your internet connection.</string>
+
+</resources>
